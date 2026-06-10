@@ -1,7 +1,7 @@
 ﻿# Adversarial Coding Pipeline Demo
 
 A multi-agent pipeline that builds a production-quality JSON validator using four
-specialized subagents — Architect, Coder, Reviewer, and a deterministic Safety Gate —
+specialized subagents (Architect, Coder, Reviewer, and a deterministic Safety Gate),
 built on the [DDT Agent Pipeline Forge](https://github.com/chandich/ddt-pipeline-forge)
 (used with permission from Chandi Cumaranatunge, ASU Enterprise Technology).
 
@@ -35,7 +35,7 @@ Feature Request
 ```
 
 The key distinction: the Reviewer *reasons* about security. The Safety Gate *enforces* it.
-Both layers are necessary — the reviewer catches design flaws and logic bugs; the gate
+Both layers are necessary: the reviewer catches design flaws and logic bugs; the gate
 catches hardcoded secrets, destructive commands, and PII patterns deterministically,
 regardless of what the model concluded.
 
@@ -47,7 +47,7 @@ single-agent pipeline to a full multi-agent system.
 
 ## What the pipeline built
 
-A pip-installable CLI tool — `validate-json` — that validates JSON data files against a
+A pip-installable CLI tool, `validate-json`, that validates JSON data files against a
 JSON Schema, with correct exit codes, field-path error messages, and hardened security.
 
 ```bash
@@ -75,7 +75,7 @@ The Reviewer found 5 issues the initial implementation missed:
 
 ## What the safety gate enforces
 
-`safety_gate.py` scans generated code before delivery. No AI involved — pure regex,
+`safety_gate.py` scans generated code before delivery. No AI involved - pure regex,
 deterministic, no dependencies beyond the standard library.
 
 | Category | Pattern |
@@ -107,9 +107,9 @@ cat some_file.py | python safety_gate.py
 
 All three pipeline artifacts are preserved in `.pipeline/`:
 
-- [`design-doc.md`](.pipeline/design-doc.md) — architect's locked design, produced before any code was written
-- [`impl-report.md`](.pipeline/impl-report.md) — coder's TDD report (every test written RED first, then GREEN)
-- [`review-report.md`](.pipeline/review-report.md) — full adversarial review with all findings and fix verification
+- [`design-doc.md`](.pipeline/design-doc.md) - architect's locked design, produced before any code was written
+- [`impl-report.md`](.pipeline/impl-report.md) - coder's TDD report (every test written RED first, then GREEN)
+- [`review-report.md`](.pipeline/review-report.md) - full adversarial review with all findings and fix verification
 
 ## Project structure
 
