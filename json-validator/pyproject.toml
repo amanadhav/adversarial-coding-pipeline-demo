@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "json-validator"
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = [
+    "jsonschema==4.23.0",
+]
+
+[project.scripts]
+validate-json = "json_validator.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.2.2",
+    "pytest-cov==5.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
