@@ -2,7 +2,7 @@
 
 A multi-agent pipeline that builds a production-quality JSON validator using four
 specialized subagents (Architect, Coder, Reviewer, and a deterministic Safety Gate),
-built on the [DDT Agent Pipeline Forge](https://github.com/chandich/ddt-pipeline-forge)
+built on the DDT Agent Pipeline Forge
 (used with permission from Chandi Cumaranatunge, ASU Enterprise Technology).
 
 ## How it works
@@ -41,7 +41,7 @@ regardless of what the model concluded.
 
 > The agent proposes. Deterministic policy disposes.
 
-This is the same philosophy as the Ethics Logic Gate in [AllVoice](https://github.com/amana/allvoice)
+This is the same philosophy as the Ethics Logic Gate in [AllVoice](https://github.com/amanadhav/AllVoice)
 (a voice-controlled browser agent built at the Kiro Spark Challenge), extended from a
 single-agent pipeline to a full multi-agent system.
 
